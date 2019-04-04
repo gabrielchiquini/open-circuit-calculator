@@ -1,4 +1,5 @@
 import deserialize from '../../src/Deserialize/Deserializer';
+import { bignumber, divide } from 'mathjs';
 import { IPartRepresentation } from '../../src/Deserialize/CircuitRepresentation';
 
 const parts: IPartRepresentation[] = [
@@ -45,11 +46,11 @@ describe('Test deserialize', () => {
     expect(circuit.nodes).toEqual(nodes);
     expect(circuit.parts.length).toBe(4);
     expect(circuit.parts[0]).toEqual(jasmine.objectContaining({
-      voltage: 5
-    }));
+      voltage: bignumber(5)
+    }) as any);
     expect(circuit.parts[2]).toEqual(jasmine.objectContaining({
-      resistance: 1000
-    }));
+      conductance: divide(bignumber(1), bignumber(1000))
+    }) as any);
   });
 });
 
