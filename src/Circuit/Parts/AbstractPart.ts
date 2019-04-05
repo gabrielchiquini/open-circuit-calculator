@@ -4,10 +4,10 @@ import Part from '../Part';
 
 export default abstract class AbstractPart implements Part {
   private properties: IPartProperties;
-  private poles: string[];
+  private _poles: string[];
 
   constructor(poles: string[], properties: IPartProperties) {
-    this.poles = poles;
+    this._poles = poles;
     this.properties = properties;
   }
 
@@ -16,4 +16,8 @@ export default abstract class AbstractPart implements Part {
   abstract get voltage(): BigNumber;
 
   abstract get current(): BigNumber;
+
+  get poles(): string[] {
+    return this.poles.slice(0);
+  }
 }

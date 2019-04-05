@@ -1,5 +1,11 @@
-import math from "mathjs";
+import { BigNumber, bignumber } from "mathjs";
 
 export function zeroBigNumber() {
-  return math.bignumber(0);
+  return bignumber(0);
+}
+
+export function sumBigNumbers(...numbers: BigNumber[]): BigNumber {
+  return numbers.reduce((acumulator, conductance) =>
+    acumulator.add(conductance),
+  );
 }

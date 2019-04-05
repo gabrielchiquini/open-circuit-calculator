@@ -1,11 +1,19 @@
-import Part from './Part';
+import Part from "./Part";
 
 export default class Circuit {
-  parts: Part[];
-  nodes: string[][];
+  public parts: Part[];
+  public nodePoles: string[][];
+  public nodeParts: Part[][];
 
   constructor(parts: Part[], nodes: string[][]) {
     this.parts = parts;
-    this.nodes = nodes;
+    this.nodePoles = nodes;
+    this.nodeParts = nodes.map((node) =>
+      node.map((nodeId) => this.findPartByPole(nodeId)),
+    );
+  }
+
+  public findPartByPole(nodeId: string): Part {
+    return this.parts.find((part) => part.poles.includes(nodeId)) as Part;
   }
 }
