@@ -1,23 +1,25 @@
 import math, { BigNumber } from 'mathjs';
-import IPartProperties from './Properties';
 import Part from '../Part';
+import IPartProperties from './Properties';
 
 export default abstract class AbstractPart implements Part {
+  public readonly poles: string[];
   private properties: IPartProperties;
-  private _poles: string[];
+  abstract get conductance(): BigNumber;
 
   constructor(poles: string[], properties: IPartProperties) {
-    this._poles = poles;
+    this.poles = poles;
     this.properties = properties;
   }
-
-  abstract get conductance(): BigNumber;
 
   abstract get voltage(): BigNumber;
 
   abstract get current(): BigNumber;
 
-  get poles(): string[] {
-    return this.poles.slice(0);
+  get firstPole(): string {
+    return this.poles[0];
+  }
+  get secondPole(): string {
+    return this.poles[1];
   }
 }
