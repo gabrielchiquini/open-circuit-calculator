@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Gabriel <gabrielchiquini@hotmail.com>",
   "scripts": {
-    "test": "ts-node ./node_modules/.bin/jasmine"
+    "test": "yarn build && ./node_modules/.bin/jasmine",
+    "build": "./node_modules/.bin/tsc"
   },
   "private": false,
   "devDependencies": {
