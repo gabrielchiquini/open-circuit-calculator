@@ -1,8 +1,11 @@
-import { PART_MAP } from './PartMap';
-import { ICircuitRepresentation, IPartRepresentation } from "./CircuitRepresentation";
-import Circuit from "../Circuit/Circuit";
 import { bignumber } from 'mathjs';
+import Circuit from '../Circuit/Circuit';
 import IPartProperties from '../Circuit/Parts/Properties';
+import {
+  ICircuitRepresentation,
+  IPartRepresentation,
+} from './CircuitRepresentation';
+import { PART_MAP } from './PartMap';
 
 export default function deserialize(circuit: ICircuitRepresentation): Circuit {
   const parts = circuit.parts.map(part => {
@@ -15,7 +18,8 @@ export default function deserialize(circuit: ICircuitRepresentation): Circuit {
 }
 function mapProperties(part: IPartRepresentation) {
   const realProperties: IPartProperties = {};
-  Object.keys(part.properties).forEach(key => realProperties[key] = bignumber(part.properties[key]));
+  Object.keys(part.properties).forEach(
+    key => (realProperties[key] = bignumber(part.properties[key])),
+  );
   return realProperties;
 }
-
