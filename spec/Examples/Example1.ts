@@ -1,8 +1,8 @@
-import { ICircuitRepresentation, IPartRepresentation } from '../src/Deserialize/CircuitRepresentation';
+import { ICircuitRepresentation } from "../../src/Deserialize/CircuitRepresentation";
+
 export const EXAMPLE1: ICircuitRepresentation = {
   parts: [
     {
-      id: '1',
       properties: {
         voltage: 5,
       },
@@ -10,7 +10,6 @@ export const EXAMPLE1: ICircuitRepresentation = {
       poles: ['1-1', '1-2'],
     },
     {
-      id: '2',
       properties: {
         resistance: 1000,
       },
@@ -18,7 +17,6 @@ export const EXAMPLE1: ICircuitRepresentation = {
       poles: ['2-1', '2-2'],
     },
     {
-      id: '3',
       properties: {
         resistance: 500,
       },
