@@ -4,7 +4,6 @@ export interface ICircuitRepresentation {
 }
 
 export interface IPartRepresentation {
-  id: string;
   type: string;
   properties: { [key: string]: number };
   poles: string[];

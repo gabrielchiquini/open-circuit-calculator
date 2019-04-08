@@ -16,13 +16,15 @@ export default function conductanceMatrix(circuit: Circuit): BigNumber[][] {
 function addConductances(nodeConductances: BigNumber[][], matrix: BigNumber[][]) {
   nodeConductances.forEach((node, i) => {
     matrix.push([]);
-    node.forEach((__, j) => {
+    for (let j = 0; j < nodeConductances.length; j++) {
       if (i === j) {
         matrix[i][j] = conductancesInsideNode(node);
-      } else {
+      } else if (nodeConductances[j]) {
         matrix[i][j] = conductancesBetweenNodes(node, nodeConductances[j]).negated();
+      } else {
+        matrix[i][j] = zeroBigNumber();
       }
-    });
+    }
   });
 }
 function conductancesInsideNode(node: BigNumber[]): BigNumber {
