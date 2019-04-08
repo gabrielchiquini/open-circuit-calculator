@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 
  * This file is used by CodeMix's Build Pipeline feature to provide fully compliant 
  * validation using the TypeScript compiler (tsc) configured at the project level. It has been 
@@ -51,4 +52,19 @@
       "group": "build"
     }
     ]
+=======
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "yarn build",
+      "type": "shell",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "group": "build"
+    }
+  ]
+>>>>>>> branch 'master' of git@github.com:gabrielchiquini/open-circuit-calculator.git
 }
