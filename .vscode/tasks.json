@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-/* 
- * This file is used by CodeMix's Build Pipeline feature to provide fully compliant 
- * validation using the TypeScript compiler (tsc) configured at the project level. It has been 
- * generated to facilitate usage.  To learn more about the tasks.json format, 
- * see: https://www.genuitec.com/go/about-tasks.json
- */
- 
-{
-	"version": "2.0.0",
-	"tasks": {
-		"version": "2.0.0",
-		"tasks": [{"label":"build","command":"yarn build","type":"shell","presentation":{"reveal":"silent"},"group":"build"}]>>>>>>>branch'master'ofgit@github.com:gabrielchiquini/open-circuit-calculator.git
-	}[
-        {
-            "type": "typescript",
-            "tsconfig": "${workspaceFolder}/tsconfig.json",
-            "problemMatcher": [
-                "$tsc"
-            ],
-            "codemix": {
-                "lifecycle": "build",
-                "validatedExtensions": [
-                    "ts"
-                ],
-                "readyChecks": [
-                    "node_modules_ready"
-                ]
-            }
-        },
-        {
-            "type": "typescript",
-            "tsconfig": "${workspaceFolder}/tsconfig.json",
-            "option": "watch",
-            "problemMatcher": [
-                "$tsc-watch"
-            ],
-            "codemix": {
-                "lifecycle": "watch",
-                "validatedExtensions": [
-                    "ts"
-                ],
-                "readyChecks": [
-                    "node_modules_ready"
-                ]
-            }
-        },
-    {
-      "label": "build",
-      "command": "yarn build",
-      "type": "shell",
-      "presentation": {
-        "reveal": "silent"
-      },
-      "group": "build"
-    }
-    ]
-=======
 {
   "version": "2.0.0",
   "tasks": [
@@ -69,5 +11,4 @@
       "group": "build"
     }
   ]
->>>>>>> branch 'master' of git@github.com:gabrielchiquini/open-circuit-calculator.git
 }

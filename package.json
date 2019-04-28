@@ -2,22 +2,24 @@
   "name": "open-circuit-calculator",
   "version": "1.0.0",
   "description": "API for calculate open-circuit simulation input",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Gabriel <gabrielchiquini@hotmail.com>",
   "scripts": {
     "test": "yarn build && ./node_modules/.bin/jasmine",
-    "build": "./node_modules/.bin/tsc"
+    "build": "./node_modules/.bin/tsc",
+    "lint": "./node_modules/.bin/tslint --project ."
   },
   "private": false,
   "devDependencies": {
     "@types/jasmine": "^3.3.12",
+    "@types/mathjs": "^5.0.1",
     "jasmine": "^3.3.1",
-    "ts-node": "^8.0.3",
     "tslint": "^5.13.1",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "@types/mathjs": "^5.0.1",
-    "mathjs": "^5.8.0"
+    "mathjs": "^5.8.0",
+    "ts-polyfill": "^3.3.3"
   }
 }
