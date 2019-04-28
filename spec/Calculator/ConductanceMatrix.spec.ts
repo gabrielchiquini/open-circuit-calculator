@@ -2,8 +2,8 @@ import { BigNumber, bignumber } from 'mathjs';
 import conductanceMatrix from '../../src/Calculator/ConductanceMatrix';
 import { ICircuitRepresentation } from '../../src/Deserialize/CircuitRepresentation';
 import deserialize from '../../src/Deserialize/Deserializer';
-import { EXAMPLE1 } from '../Examples/Example1';
-import { EXAMPLE2 } from '../Examples/Example2';
+import { EXAMPLE1 } from '../Examples/valid/Example1';
+import { EXAMPLE2 } from '../Examples/valid/Example2';
 import { trueMatrix } from '../util/util';
 
 describe('Matrices generation', () => {

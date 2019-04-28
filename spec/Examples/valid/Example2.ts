@@ -1,4 +1,4 @@
-import { ICircuitRepresentation } from "../../src/Deserialize/CircuitRepresentation";
+import { ICircuitRepresentation } from "../../../src/Deserialize/CircuitRepresentation";
 
 export const EXAMPLE2: ICircuitRepresentation = {
   nodes: [

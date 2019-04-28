@@ -2,9 +2,9 @@ import { BigNumber, bignumber } from 'mathjs';
 import sourceMatrix from '../../src/Calculator/SourceMatrix';
 import { ICircuitRepresentation } from '../../src/Deserialize/CircuitRepresentation';
 import deserialize from '../../src/Deserialize/Deserializer';
-import { EXAMPLE1 } from '../Examples/Example1';
-import { EXAMPLE2 } from '../Examples/Example2';
-import { EXAMPLE3 } from '../Examples/Example3';
+import { EXAMPLE1 } from '../Examples/valid/Example1';
+import { EXAMPLE2 } from '../Examples/valid/Example2';
+import { EXAMPLE3 } from '../Examples/valid/Example3';
 import { trueArray } from '../util/util';
 
 describe('Matrices generation', () => {

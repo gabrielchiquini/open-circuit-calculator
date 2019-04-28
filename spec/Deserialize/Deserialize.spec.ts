@@ -1,6 +1,6 @@
 import { bignumber, divide } from 'mathjs';
 import deserialize from '../../src/Deserialize/Deserializer';
-import { EXAMPLE1 } from '../Examples/Example1';
+import { EXAMPLE1 } from '../Examples/valid/Example1';
 
 describe('Test deserialize', () => {
   it('Should deserialize circuit', () => {
