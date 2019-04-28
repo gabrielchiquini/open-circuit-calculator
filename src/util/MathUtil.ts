@@ -12,7 +12,7 @@ export function sumBigNumbers(...numbers: BigNumber[]): BigNumber {
   }
 }
 
-export function zeroBigNumberArray(length :number): BigNumber[] {
+export function zeroBigNumberArray(length: number): BigNumber[] {
   const arr = [];
   for (let i = 0; i < length; i++) {
     arr[i] = zeroBigNumber();
