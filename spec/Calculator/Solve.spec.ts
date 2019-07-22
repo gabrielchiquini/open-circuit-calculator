@@ -21,7 +21,9 @@ describe('Matrices generation', () => {
 
 function testExample(example: ICircuitRepresentation, expected: Array<number | BigNumber>) {
   const circuit = deserialize(example);
+  console.time('solve');
   const matrix = solve(circuit);
+  console.timeEnd('solve');
   expect(matrix).toEqual(mapToBigNumber(expected));
 }
 
