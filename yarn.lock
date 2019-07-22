@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.12.tgz#bf282cb540e9ad7a0a04b742082c073b655eab39"
   integrity sha512-lXvr2xFQEVQLkIhuGaR3GC1L9lMU1IxeWnAF/wNY5ZWpC4p9dgxkKkzMp7pntpAdv9pZSnYqgsBkCg32MXSZMg==
 
-"@types/mathjs@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@types/mathjs/-/mathjs-5.0.1.tgz#b98e163ea396b4f27bec20ee25ffb8fe9e656af8"
-  integrity sha512-EFBuueI+BRed9bnUO6/9my55b4FH+VQIvqMm58h9JGbtaGCkqr3YSDhnmVbM1SJjF//8SURERSypzNwejOk7lA==
+"@types/mathjs@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@types/mathjs/-/mathjs-6.0.0.tgz#5f00e276fbcd4d59d3bb54230b775383db4729a3"
+  integrity sha512-5lQUtV1ukuKGTbeFMb3R8Uan3cBcQ8/H6aZfybkcxCx8NmqSOprwU4bAI/RCU1Q+5fHTGU4Ru8FAZOfsqYL03A==
   dependencies:
     decimal.js "^10.0.0"
 

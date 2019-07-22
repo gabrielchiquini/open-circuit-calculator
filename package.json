@@ -13,7 +13,7 @@
   "private": false,
   "devDependencies": {
     "@types/jasmine": "^3.3.12",
-    "@types/mathjs": "^5.0.1",
+    "@types/mathjs": "^6.0.0",
     "jasmine": "^3.3.1",
     "tslint": "^5.13.1",
     "typescript": "^3.3.3333"

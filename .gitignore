@@ -175,3 +175,5 @@ local.properties
 
 *.dat
 *.dpl
+
+.idea/
