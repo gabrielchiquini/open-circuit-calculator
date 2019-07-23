@@ -3,37 +3,37 @@ import {ICircuitRepresentation} from "../../../src/Deserialize/CircuitRepresenta
 export const EXAMPLE4: ICircuitRepresentation = {
   nodes: [
     [
-      "838ee49c-d2b0-43c3-9959-26d082961d27",
-      "774120ff-00a8-4aeb-a582-e68ebfcfd836",
-      "f8dc7981-f453-4b75-a8a8-5d552e2b5edd",
-      "afe79b52-f8ec-468c-b798-2ce071df77e4",
-      "ef479316-64fc-4b29-98e4-83d6e8d0ac38",
+      "V2-1",
+      "RR7-1",
+      "R1-2",
+      "V3-2",
+      "RR4-2",
     ],
     [
-      "33199be3-dbc6-435a-9950-a2a09b3468b5",
-      "538c0028-edea-4dd5-b9f5-b76be127e572",
-      "b6d03974-57e7-4cf8-963f-05b70923e748",
+      "V2-2",
+      "R1-1",
+      "V4-1",
     ],
     [
-      "ecf19609-81c1-4d79-8479-9fb3122ae475",
-      "1d8c188d-fa1a-436b-865f-ce130291932a",
-      "7e026e89-1fc4-4a67-8125-247cab33afa1",
+      "V4-2",
+      "RR4-1",
+      "RR2-1",
     ],
     [
-      "e1b80013-0d23-41b6-b126-a6736fa1d8f5",
-      "6bf8133e-a6b6-4295-b343-faf3b5aa31ba",
-      "76e9ee02-5f32-4b24-9d90-c7039f9d10b7",
+      "RR2-2",
+      "RR3-1",
     ],
     [
-      "ffc3f714-21d2-4b4c-a789-8ec35d993790",
-      "d473f330-d5bc-42e2-8177-f4151443531a",
+      "V3-1",
+      "RR7-2",
+      "RR3-2",
     ],
   ],
   parts: [
     {
       poles: [
-        "33199be3-dbc6-435a-9950-a2a09b3468b5",
-        "838ee49c-d2b0-43c3-9959-26d082961d27",
+        "V2-1",
+        "V2-2",
       ],
       properties: {
         voltage: 5,
@@ -42,8 +42,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "538c0028-edea-4dd5-b9f5-b76be127e572",
-        "f8dc7981-f453-4b75-a8a8-5d552e2b5edd",
+        "R1-1",
+        "R1-2",
       ],
       properties: {
         resistance: 1000,
@@ -52,8 +52,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "e1b80013-0d23-41b6-b126-a6736fa1d8f5",
-        "b6d03974-57e7-4cf8-963f-05b70923e748",
+        "V4-1",
+        "V4-2",
       ],
       properties: {
         voltage: 0.5,
@@ -62,8 +62,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "6bf8133e-a6b6-4295-b343-faf3b5aa31ba",
-        "ef479316-64fc-4b29-98e4-83d6e8d0ac38",
+        "RR4-1",
+        "RR4-2",
       ],
       properties: {
         resistance: 10000,
@@ -72,8 +72,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "76e9ee02-5f32-4b24-9d90-c7039f9d10b7",
-        "ffc3f714-21d2-4b4c-a789-8ec35d993790",
+        "RR2-1",
+        "RR2-2",
       ],
       properties: {
         resistance: 0.2,
@@ -82,8 +82,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "d473f330-d5bc-42e2-8177-f4151443531a",
-        "7e026e89-1fc4-4a67-8125-247cab33afa1",
+        "RR3-1",
+        "RR3-2",
       ],
       properties: {
         resistance: 300,
@@ -92,8 +92,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "afe79b52-f8ec-468c-b798-2ce071df77e4",
-        "ecf19609-81c1-4d79-8479-9fb3122ae475",
+        "V3-1",
+        "V3-2",
       ],
       properties: {
         voltage: 100,
@@ -102,8 +102,8 @@ export const EXAMPLE4: ICircuitRepresentation = {
     },
     {
       poles: [
-        "774120ff-00a8-4aeb-a582-e68ebfcfd836",
-        "1d8c188d-fa1a-436b-865f-ce130291932a",
+        "RR7-1",
+        "RR7-2",
       ],
       properties: {
         resistance: 2.3,

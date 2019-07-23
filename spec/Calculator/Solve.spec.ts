@@ -1,11 +1,11 @@
-import { bignumber, BigNumber } from 'mathjs';
-import calculate from '../..';
+import {bignumber, BigNumber} from 'mathjs';
 import solve from "../../src/Calculator/Solve";
-import { ICircuitRepresentation } from '../../src/Deserialize/CircuitRepresentation';
+import {ICircuitRepresentation} from '../../src/Deserialize/CircuitRepresentation';
 import deserialize from "../../src/Deserialize/Deserializer";
-import { EXAMPLE1 } from '../Examples/valid/Example1';
-import { EXAMPLE2 } from '../Examples/valid/Example2';
-import { EXAMPLE3 } from '../Examples/valid/Example3';
+import {EXAMPLE1} from '../Examples/valid/Example1';
+import {EXAMPLE2} from '../Examples/valid/Example2';
+import {EXAMPLE3} from '../Examples/valid/Example3';
+import {EXAMPLE4} from "../Examples/valid/Example4";
 
 describe('Matrices generation', () => {
   it('Should solve example 1', () => {
@@ -23,16 +23,32 @@ describe('Matrices generation', () => {
   it('Should solve example 3', () => {
     testExample(EXAMPLE3, [5, -3, 154, 4]);
   });
+
+  it('Should solve example 4', () => {
+    testExample(EXAMPLE4, [5, 5.5, 5.43, -100]);
+  });
 });
 
 function testExample(example: ICircuitRepresentation, expected: Array<number | BigNumber>) {
   const circuit = deserialize(example);
   console.time('solve');
-  const matrix = solve(circuit);
+  let matrix: any[] = [];
+  for (let i = 0; i < 10000; i++) {
+    matrix = solve(circuit);
+  }
   console.timeEnd('solve');
-  expect(matrix).toEqual(mapToBigNumber(expected));
+  const matrixNumber = mapToNumber(matrix);
+  const expectedNumber = mapToNumber((expected));
+  for (let i = 0; i < matrix.length; i++) {
+    expect(matrix[i]).toBeCloseTo(expectedNumber[i], 0.000001);
+  }
 }
 
-function mapToBigNumber(expected: Array<number | BigNumber>): BigNumber[] {
-  return expected.map(value => bignumber(value)) as BigNumber[];
+function mapToNumber(arr: Array<number | BigNumber>): number[] {
+  return arr.map(value => {
+    if (typeof value === 'number') {
+      return value;
+    }
+    return value.toNumber();
+  });
 }

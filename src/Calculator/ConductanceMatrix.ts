@@ -9,7 +9,7 @@ export default function conductanceMatrix(circuit: Circuit): BigNumber[][] {
 
   addConductances(nodeConductances, matrix);
   addVoltageSources(circuit, matrix);
-  console.log(matrix.map(list => list.map(num => num.toNumber())));
+  // console.log(matrix.map(list => list.map(num => num.toNumber())));
   return matrix;
 }
 
