@@ -1,14 +1,20 @@
 import { bignumber, BigNumber } from 'mathjs';
-import solve from '../../src/Calculator/Solve';
+import calculate from '../..';
+import solve from "../../src/Calculator/Solve";
 import { ICircuitRepresentation } from '../../src/Deserialize/CircuitRepresentation';
-import deserialize from '../../src/Deserialize/Deserializer';
+import deserialize from "../../src/Deserialize/Deserializer";
 import { EXAMPLE1 } from '../Examples/valid/Example1';
 import { EXAMPLE2 } from '../Examples/valid/Example2';
 import { EXAMPLE3 } from '../Examples/valid/Example3';
 
 describe('Matrices generation', () => {
   it('Should solve example 1', () => {
-    testExample(EXAMPLE1, [5, bignumber(5).minus(bignumber(1).dividedBy(0.3))]);
+    testExample(EXAMPLE1, [
+      5,
+      bignumber(5)
+        .minus(bignumber(1).dividedBy(0.3))
+        .toNumber(),
+    ]);
   });
   it('Should solve example 2', () => {
     testExample(EXAMPLE2, [5, -3, 4]);

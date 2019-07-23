@@ -6,9 +6,9 @@
   "types": "dist/index.d.ts",
   "author": "Gabriel <gabrielchiquini@hotmail.com>",
   "scripts": {
-    "test": "yarn build && ./node_modules/.bin/jasmine",
-    "build": "./node_modules/.bin/tsc",
-    "lint": "yarn build && ./node_modules/.bin/tslint --project ."
+    "test": "yarn build && yarn jasmine",
+    "build": "yarn tsc",
+    "lint": "yarn build && yarn tslint --project ."
   },
   "private": false,
   "devDependencies": {
