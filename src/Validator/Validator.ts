@@ -1,4 +1,4 @@
-import { ICircuitRepresentation } from '../Deserialize/CircuitRepresentation';
+import {ICircuitRepresentation} from '../Deserialize/CircuitRepresentation';
 import CircuitError from './CircuitError';
 
 export default function validate(circuit: ICircuitRepresentation): CircuitError {
@@ -16,6 +16,7 @@ export default function validate(circuit: ICircuitRepresentation): CircuitError 
   });
   return errors;
 }
+
 function nodePolesShortCircuit(polesbyPart: string[][], node: string[], errors: CircuitError) {
   polesbyPart.forEach(partPoles => {
     const polesInNode = partPoles.filter(pole => node.includes(pole));

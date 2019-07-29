@@ -1,12 +1,11 @@
-import { ICircuitRepresentation } from '../../src/Deserialize/CircuitRepresentation';
-import deserialize from '../../src/Deserialize/Deserializer';
+import {ICircuitRepresentation} from '../../src/Deserialize/CircuitRepresentation';
 import validate from '../../src/Validator/Validator';
-import { EXAMPLE_SINGLE_FLOATING } from '../Examples/invalid/ExampleSinglePartFloating';
-import { EXAMPLE_SINGLE_SHORT_CIRCUIT } from '../Examples/invalid/ExampleSinglePartShortCircuit';
-import { EXAMPLE1 } from '../Examples/valid/Example1';
-import { EXAMPLE2 } from '../Examples/valid/Example2';
-import { EXAMPLE3 } from '../Examples/valid/Example3';
-import { EXAMPLE_MIXED } from '../Examples/invalid/ExampleMixed';
+import {EXAMPLE_MIXED} from '../Examples/invalid/ExampleMixed';
+import {EXAMPLE_SINGLE_FLOATING} from '../Examples/invalid/ExampleSinglePartFloating';
+import {EXAMPLE_SINGLE_SHORT_CIRCUIT} from '../Examples/invalid/ExampleSinglePartShortCircuit';
+import {EXAMPLE1} from '../Examples/valid/Example1';
+import {EXAMPLE2} from '../Examples/valid/Example2';
+import {EXAMPLE3} from '../Examples/valid/Example3';
 
 describe('Test validator', () => {
   it('Should catch floating', () => {

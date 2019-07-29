@@ -31,16 +31,12 @@ describe('Matrices generation', () => {
 
 function testExample(example: ICircuitRepresentation, expected: Array<number | BigNumber>) {
   const circuit = deserialize(example);
-  console.time('solve');
-  let matrix: any[] = [];
-  for (let i = 0; i < 10000; i++) {
-    matrix = solve(circuit);
-  }
-  console.timeEnd('solve');
+  const matrix = solve(circuit);
   const matrixNumber = mapToNumber(matrix);
+  // console.log(matrixNumber);
   const expectedNumber = mapToNumber((expected));
   for (let i = 0; i < matrix.length; i++) {
-    expect(matrix[i]).toBeCloseTo(expectedNumber[i], 0.000001);
+    expect(matrixNumber[i]).toBeCloseTo(expectedNumber[i], 0.000001);
   }
 }
 
