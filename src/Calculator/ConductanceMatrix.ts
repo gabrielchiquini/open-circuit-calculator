@@ -41,8 +41,8 @@ function addVoltageSources(circuit: Circuit, matrix: BigNumber[][]) {
   voltageParts.forEach(_part => {
     const oldSize = matrix.length;
     const newLine = zeroBigNumberArray(matrix.length + 1);
-    const negative = circuit.nodeNumberByPole(_part.secondPole);
-    const positive = circuit.nodeNumberByPole(_part.firstPole);
+    const negative = circuit.nodeNumberByPole(_part.firstPole);
+    const positive = circuit.nodeNumberByPole(_part.secondPole);
     if (positive > -1) {
       newLine[positive] = bignumber(1);
     }
