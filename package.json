@@ -8,7 +8,7 @@
   "scripts": {
     "test": "yarn build && yarn jasmine",
     "build": "yarn tsc",
-    "lint": "yarn build && yarn tslint --project ."
+    "lint": "yarn tsc --noEmit && yarn tslint --project ."
   },
   "private": false,
   "devDependencies": {

@@ -3,7 +3,7 @@ import 'ts-polyfill/lib/es2016-array-include';
 import solve from "./src/Calculator";
 import {ICircuitRepresentation} from './src/Deserialize/CircuitRepresentation';
 import deserialize from "./src/Deserialize/Deserializer";
-import validate from "./src/Validator/Validator";
+import validate from "./src/Validator";
 
 export interface IPoleVoltage {
   pole: string;

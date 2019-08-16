@@ -2,7 +2,7 @@ import { ICircuitRepresentation } from '../../../src/Deserialize/CircuitRepresen
 
 export const EXAMPLE3: ICircuitRepresentation = {
   nodes: [
-    ['R500-1', 'V5-1'],
+    ['R500-1', 'V5-1', '0'],
     ['V5-2', 'R1000-1'],
     ['R1000-2', 'V7-1', 'C0.5-1'],
     ['C0.5-2', 'R300-1'],
@@ -38,6 +38,11 @@ export const EXAMPLE3: ICircuitRepresentation = {
       poles: ['C0.5-1', 'C0.5-2'],
       properties: { current: 0.5 },
       type: 'CurrentSource',
+    },
+    {
+      properties: {},
+      type: 'Ground',
+      poles: ['0'],
     },
   ],
 };

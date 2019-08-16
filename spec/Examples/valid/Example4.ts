@@ -3,13 +3,6 @@ import {ICircuitRepresentation} from "../../../src/Deserialize/CircuitRepresenta
 export const EXAMPLE4: ICircuitRepresentation = {
   nodes: [
     [
-      "V2-1",
-      "RR7-1",
-      "R1-2",
-      "V3-2",
-      "RR4-2",
-    ],
-    [
       "V2-2",
       "R1-1",
       "V4-1",
@@ -27,6 +20,14 @@ export const EXAMPLE4: ICircuitRepresentation = {
       "V3-1",
       "RR7-2",
       "RR3-2",
+    ],
+    [
+      "V2-1",
+      "RR7-1",
+      "R1-2",
+      "V3-2",
+      "RR4-2",
+      '0',
     ],
   ],
   parts: [
@@ -109,6 +110,11 @@ export const EXAMPLE4: ICircuitRepresentation = {
         resistance: 2.3,
       },
       type: "Resistor",
+    },
+    {
+      properties: {},
+      type: 'Ground',
+      poles: ['0'],
     },
   ],
 };

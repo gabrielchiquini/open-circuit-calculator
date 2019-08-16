@@ -1,3 +1,4 @@
+import PartType from "../Circuit/PartType";
 import {ICircuitRepresentation} from '../Deserialize/CircuitRepresentation';
 import CircuitError from './CircuitError';
 
@@ -14,6 +15,17 @@ export default function validate(circuit: ICircuitRepresentation): CircuitError 
     const floatingPoles = poles.filter(pole => !flattenPoles.includes(pole));
     errors.floating.push(...floatingPoles);
   });
+
+  const groundPoles = circuit.parts.filter(part => part.type === PartType.GROUND).map(gnd => gnd.poles[0]);
+  if (groundPoles.length === 0) {
+    errors.groundMissing = true;
+  } else {
+    groundPoles.forEach(pole => {
+      errors.groundMissing = !flattenPoles.includes(pole);
+      return !errors.groundMissing;
+    });
+  }
+
   return errors;
 }
 

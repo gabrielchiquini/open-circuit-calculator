@@ -1,5 +1,5 @@
 import {ICircuitRepresentation} from '../../src/Deserialize/CircuitRepresentation';
-import validate from '../../src/Validator/Validator';
+import validate from '../../src/Validator';
 import {EXAMPLE_MIXED} from '../Examples/invalid/ExampleMixed';
 import {EXAMPLE_SINGLE_FLOATING} from '../Examples/invalid/ExampleSinglePartFloating';
 import {EXAMPLE_SINGLE_SHORT_CIRCUIT} from '../Examples/invalid/ExampleSinglePartShortCircuit';

@@ -7,7 +7,7 @@ describe('Test deserialize', () => {
     const circuit = deserialize(EXAMPLE1);
     expect(circuit).toBeDefined();
     expect(circuit.nodePoles).toEqual(EXAMPLE1.nodes.slice(1));
-    expect(circuit.parts.length).toBe(3);
+    expect(circuit.parts.length).toBe(4);
     expect(circuit.parts[0]).toEqual(jasmine.objectContaining({
       voltage: bignumber(5),
     }) as any);
