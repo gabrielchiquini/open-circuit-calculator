@@ -1,5 +1,5 @@
 import {bignumber, BigNumber} from 'mathjs';
-import solve from "../../src/Calculator/Solve";
+import solve from "../../src/Calculator";
 import {ICircuitRepresentation} from '../../src/Deserialize/CircuitRepresentation';
 import deserialize from "../../src/Deserialize/Deserializer";
 import {EXAMPLE1} from '../Examples/valid/Example1';
