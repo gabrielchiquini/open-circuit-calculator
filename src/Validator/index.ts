@@ -17,15 +17,7 @@ export default function validate(circuit: ICircuitRepresentation): CircuitError 
   });
 
   const groundPoles = circuit.parts.filter(part => part.type === PartType.GROUND).map(gnd => gnd.poles[0]);
-  if (groundPoles.length === 0) {
-    errors.groundMissing = true;
-  } else {
-    groundPoles.forEach(pole => {
-      errors.groundMissing = !flattenPoles.includes(pole);
-      return !errors.groundMissing;
-    });
-  }
-
+  errors.groundMissing = groundPoles.length === 0;
   return errors;
 }
 

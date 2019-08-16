@@ -1,11 +1,13 @@
 import {ICircuitRepresentation} from '../../src/Deserialize/CircuitRepresentation';
 import validate from '../../src/Validator';
+import {EXAMPLE_GROUND_FLOATING} from "../Examples/invalid/ExampleGroundFloating";
 import {EXAMPLE_MIXED} from '../Examples/invalid/ExampleMixed';
 import {EXAMPLE_SINGLE_FLOATING} from '../Examples/invalid/ExampleSinglePartFloating';
 import {EXAMPLE_SINGLE_SHORT_CIRCUIT} from '../Examples/invalid/ExampleSinglePartShortCircuit';
 import {EXAMPLE1} from '../Examples/valid/Example1';
 import {EXAMPLE2} from '../Examples/valid/Example2';
 import {EXAMPLE3} from '../Examples/valid/Example3';
+import {EXAMPLE4} from "../Examples/valid/Example4";
 
 describe('Test validator', () => {
   it('Should catch floating', () => {
@@ -14,6 +16,12 @@ describe('Test validator', () => {
     expect(errors.floating.length).toBe(2);
     expect(errors.floating).toContain('1-1');
     expect(errors.floating).toContain('1-2');
+  });
+
+  it('Should catch ground floating', () => {
+    const errors = validate(EXAMPLE_GROUND_FLOATING);
+    expect(errors.valid()).toBeFalsy();
+    expect(errors.floating.length).toBe(1);
   });
 
   it('Should catch short circuit', () => {
@@ -39,6 +47,7 @@ describe('Test validator', () => {
     expect(isValid(EXAMPLE1)).toBeTruthy();
     expect(isValid(EXAMPLE2)).toBeTruthy();
     expect(isValid(EXAMPLE3)).toBeTruthy();
+    expect(isValid(EXAMPLE4)).toBeTruthy();
   });
 
   function isValid(representation: ICircuitRepresentation) {
