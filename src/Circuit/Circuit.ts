@@ -30,9 +30,8 @@ export default class Circuit {
     const groundPoles = parts.filter(part => part.type === PartType.GROUND).map(gnd => gnd.firstPole);
     return nodes.filter(node => {
       let found = false;
-      groundPoles.forEach(groundPole => {
-        found = node.includes(groundPole);
-        return !found; // breaks the loop when found
+      groundPoles.some(groundPole => {
+        return found = node.includes(groundPole);
       });
       return !found;
     });

@@ -6,6 +6,7 @@ import {EXAMPLE1} from '../Examples/valid/Example1';
 import {EXAMPLE2} from '../Examples/valid/Example2';
 import {EXAMPLE3} from '../Examples/valid/Example3';
 import {EXAMPLE4} from "../Examples/valid/Example4";
+import {EXAMPLE5} from "../Examples/valid/Example5";
 
 describe('Matrices generation', () => {
   it('Should solve example 1', () => {
@@ -26,6 +27,15 @@ describe('Matrices generation', () => {
 
   it('Should solve example 4', () => {
     testExample(EXAMPLE4, [5, 5.5, 5.43, -100]);
+  });
+
+  it('Should solve example 5', () => {
+    testExample(EXAMPLE5, [
+      5,
+      bignumber(5)
+        .minus(bignumber(1).dividedBy(0.3))
+        .toNumber(),
+    ]);
   });
 });
 
