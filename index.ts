@@ -4,6 +4,9 @@ import solve from "./src/Calculator";
 import {ICircuitRepresentation} from './src/Deserialize/CircuitRepresentation';
 import deserialize from "./src/Deserialize/Deserializer";
 import validate from "./src/Validator";
+import CircuitError from "./src/Validator/CircuitError";
+
+export {CircuitError};
 
 export interface IPoleVoltage {
   pole: string;
