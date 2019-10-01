@@ -15,11 +15,14 @@
     "@types/jasmine": "^3.3.12",
     "@types/mathjs": "^5.0.1",
     "jasmine": "^3.3.1",
+    "ts-node": "^8.3.0",
     "tslint": "^5.13.1",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
+    "bignumber.js": "^9.0.0",
     "mathjs": "^5.8.0",
+    "na-gaussian-elimination": "^0.0.4",
     "ts-polyfill": "^3.3.3"
   }
 }
